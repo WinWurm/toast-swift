@@ -56,7 +56,7 @@ public class Toast {
     
     private let config: ToastConfiguration
     
-    private(set) var direction: Direction
+    public private(set) var direction: Direction
     
     /// Creates a new Toast with the default Apple style layout with a title and an optional subtitle.
     /// - Parameters:
