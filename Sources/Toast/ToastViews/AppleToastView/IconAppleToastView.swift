@@ -40,7 +40,7 @@ public class IconAppleToastView : UIStackView {
     }()
     
     public static var defaultImageTint: UIColor {
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, *) {
             return .label
         } else {
             return .black

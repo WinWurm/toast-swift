@@ -43,7 +43,7 @@ public class Toast {
     private var startShiftY: CGFloat = 0
     
     public static var defaultImageTint: UIColor {
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, *) {
             return .label
         } else {
             return .black
@@ -156,7 +156,8 @@ public class Toast {
             enablePanToClose()
         }
     }
-    
+
+    #if !os(tvOS)
     /// Show the toast with haptic feedback
     /// - Parameters:
     ///   - type: Haptic feedback type
@@ -165,6 +166,7 @@ public class Toast {
         UINotificationFeedbackGenerator().notificationOccurred(type)
         show(after: time)
     }
+    #endif
     
     /// Show the toast
     /// - Parameter delay: Time after which the toast is shown
