@@ -30,9 +30,7 @@ public class Toast {
     private var multicast = MulticastDelegate<ToastDelegate>()
     
     public private(set) var config: ToastConfiguration
-    
-    public private(set) var direction: Direction
-    
+
     /// Creates a new Toast with the default Apple style layout with a title and an optional subtitle.
     /// - Parameters:
     ///   - title: Attributed title which is displayed in the toast view
